@@ -40,7 +40,7 @@ require (
 	github.com/santhosh-tekuri/jsonschema/v5 v5.3.1
 	github.com/seehuhn/mt19937 v1.0.0
 	github.com/slok/go-http-metrics v0.13.0
-	github.com/spacemeshos/api/release/go v1.58.0
+	github.com/spacemeshos/api/release/go v1.59.0
 	github.com/spacemeshos/economics v0.1.4
 	github.com/spacemeshos/fixed v0.1.2
 	github.com/spacemeshos/go-scale v1.2.1
@@ -262,6 +262,11 @@ require (
 	sigs.k8s.io/yaml v1.4.0 // indirect
 )
 
-// temporary until this issue is resolved and cloud.google.com/go/storage has been updated
-// https://github.com/googleapis/google-cloud-go/issues/11283
-exclude google.golang.org/grpc v1.69.0
+exclude (
+	// temporary until this issue is resolved and cloud.google.com/go/storage has been updated
+	// https://github.com/googleapis/google-cloud-go/issues/11283
+	google.golang.org/grpc v1.68.2
+	google.golang.org/grpc v1.69.0
+	google.golang.org/grpc v1.69.1
+	google.golang.org/grpc v1.69.2
+)
